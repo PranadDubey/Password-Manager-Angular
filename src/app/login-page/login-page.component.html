@@ -1,0 +1,141 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-3"></div>
+    <div class="col-6 mt-5 pt-5 mb-5 pb-5">
+      <div class="box-content p-3 bg-dark rounded-4">
+        <mat-tab-group class="text-white">
+          <mat-tab label="Log In">
+            <form
+              class="container mt-5 pt-5"
+              [formGroup]="logInForm"
+              (ngSubmit)="onLogIn(logInForm.value)"
+            >
+              <div class="row mb-3">
+                <div class="col-3"></div>
+                <div class="col-9">
+                  <div class="fs-3">Email ID</div>
+                </div>
+              </div>
+              <div class="row mb-3">
+                <div class="col-3"></div>
+                <div class="col-9">
+                  <input
+                    class="rounded-1 text-dark"
+                    style="height: 40px; width: 300px"
+                    placeholder="abc@123.com"
+                    formControlName="loginEmail"
+                  />
+                </div>
+              </div>
+              <div class="row mb-3">
+                <div class="col-3"></div>
+                <div class="col-9">
+                  <div class="fs-3">Password</div>
+                </div>
+              </div>
+              <div class="row mb-3">
+                <div class="col-3"></div>
+                <div class="col-9">
+                  <input
+                    class="rounded-1 text-dark"
+                    style="height: 40px; width: 300px"
+                    placeholder="******"
+                    type="password"
+                    formControlName="loginPassword"
+                  />
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-4"></div>
+                <div class="col-6 ms-3">
+                  <button
+                    class="bg-white text-dark rounded-3 mt-5 mb-5 fs-5"
+                    style="width: 150px; height: 50px"
+                    routerLink="/siteList"
+                    type="button"
+                  >
+                    Log In
+                  </button>
+                </div>
+              </div>
+            </form>
+          </mat-tab>
+          <mat-tab label="Register">
+            <form
+              class="container mt-5 pt-5"
+              [formGroup]="registerForm"
+              (submit)="onRegister(registerForm.value)"
+            >
+              <div class="row mb-3">
+                <div class="col-3"></div>
+                <div class="col-9">
+                  <div class="fs-3">Email ID</div>
+                </div>
+              </div>
+              <div class="row mb-3">
+                <div class="col-3"></div>
+                <div class="col-9">
+                  <input
+                    class="rounded-1 text-dark"
+                    style="height: 40px; width: 300px"
+                    placeholder="abc@123.com"
+                    FormControlName="registerEmail"
+                  />
+                </div>
+              </div>
+              <div class="row mb-3">
+                <div class="col-3"></div>
+                <div class="col-9">
+                  <div class="fs-3">Password</div>
+                </div>
+              </div>
+              <div class="row mb-3">
+                <div class="col-3"></div>
+                <div class="col-9">
+                  <input
+                    class="rounded-1 text-dark"
+                    style="height: 40px; width: 300px"
+                    placeholder="******"
+                    type="password"
+                    FormControlName="registerPassword"
+                  />
+                </div>
+                <div class="row mt-3 mb-3">
+                  <div class="col-3"></div>
+                  <div class="col-9">
+                    <div class="fs-3">Contact Number</div>
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <div class="col-2 ms-5"></div>
+                  <div class="col-9">
+                    <input
+                      class="rounded-1 text-dark"
+                      style="height: 40px; width: 300px"
+                      placeholder="Enter Phone Number"
+                      FormControlName="registerNumber"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-4"></div>
+                <div class="col-6 ms-3">
+                  <button
+                    mat-raised-button
+                    class="bg-white text-dark rounded-3 mt-5 mb-5 fs-5"
+                    style="width: 150px; height: 50px"
+                    routerLink="siteList"
+                  >
+                    Register Now
+                  </button>
+                </div>
+              </div>
+            </form>
+          </mat-tab>
+        </mat-tab-group>
+      </div>
+    </div>
+    <div class="col-3"></div>
+  </div>
+</div>
